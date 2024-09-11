@@ -9,6 +9,6 @@ resource "segment_destination_subscription" "id-6648883872e824ad8803c1a9_mqX85aX
   enabled        = true
   model_id       = "jVekacFFukWA38jFXYz46F"
   name           = "Review with Sentiment"
-  settings       = "{\"anonymous_id\":{\"@path\":\"$.properties.ANONYMOUS_ID\"},\"consent\":{\"@path\":\"$.context.consent\"},\"event_name\":\"Product Review\",\"message_id\":{\"@path\":\"$.messageId\"},\"properties\":{\"@path\":\"$.properties\"},\"timestamp\":{\"@path\":\"$.properties.TIMESTAMP\"},\"user_id\":{\"@path\":\"$.properties.USER_ID\"}}"
+  settings       = "{\"anonymous_id\":{\"@path\":\"$.properties.ANONYMOUS_ID\"},\"consent\":{\"@path\":\"$.context.consent\"},\"event_name\":\"Product Review\",\"message_id\":{\"@path\":\"$.messageId\"},\"properties\":{\"ANONYMOUS_ID\":{\"@path\":\"$.properties.ANONYMOUS_ID\"},\"GENERATED_ID\":{\"@path\":\"$.properties.GENERATED_ID\"},\"ID\":{\"@path\":\"$.properties.ID\"},\"PRICE\":{\"@path\":\"$.properties.PRICE\"},\"PRODUCT_CATEGORY\":{\"@path\":\"$.properties.PRODUCT_CATEGORY\"},\"PRODUCT_DESCRIPTION\":{\"@path\":\"$.properties.PRODUCT_DESCRIPTION\"},\"PRODUCT_NAME\":{\"@path\":\"$.properties.PRODUCT_NAME\"},\"REVIEW\":{\"@path\":\"$.properties.REVIEW\"},\"SENTIMENT_SCORE\":{\"@path\":\"$.properties.SENTIMENT_SCORE\"},\"TIMESTAMP\":{\"@path\":\"$.properties.TIMESTAMP\"},\"USER_ID\":{\"@path\":\"$.properties.USER_ID\"}},\"timestamp\":{\"@path\":\"$.properties.TIMESTAMP\"},\"user_id\":{\"@path\":\"$.properties.USER_ID\"}}"
   trigger        = "event = \"new\" or event = \"updated\""
 }
