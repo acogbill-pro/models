@@ -1,0 +1,14 @@
+import {
+  to = segment_destination_subscription.id-6648883872e824ad8803c1a9_ewjBt2Lgren71y4bP7iR4t
+  id = "6648883872e824ad8803c1a9:ewjBt2Lgren71y4bP7iR4t"
+}
+
+resource "segment_destination_subscription" "id-6648883872e824ad8803c1a9_ewjBt2Lgren71y4bP7iR4t" {
+  action_id      = "oiFvX4YXwyaPVysi1t7mtz"
+  destination_id = "6648883872e824ad8803c1a9"
+  enabled        = false
+  model_id       = "jVekacFFukWA38jFXYz46F"
+  name           = "Send Track"
+  settings       = "{}"
+  trigger        = "type = \"track\""
+}
