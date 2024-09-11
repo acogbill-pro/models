@@ -6,7 +6,7 @@ import {
 resource "segment_destination_subscription" "id-6648883872e824ad8803c1a9_ewjBt2Lgren71y4bP7iR4t" {
   action_id      = "oiFvX4YXwyaPVysi1t7mtz"
   destination_id = "6648883872e824ad8803c1a9"
-  enabled        = false
+  enabled        = true
   model_id       = "jVekacFFukWA38jFXYz46F"
   name           = "Product Review with Sentiment (DBT)"
   settings       = "{\"anonymous_id\":{\"@path\":\"$.properties.ANONYMOUS_ID\"},\"consent\":{\"@path\":\"$.context.consent\"},\"event_name\":\"Product Review\",\"message_id\":{\"@path\":\"$.messageId\"},\"properties\":{\"@path\":\"$.properties\"},\"timestamp\":{\"@path\":\"$.properties.TIMESTAMP\"},\"traits\":{\"@path\":\"$.properties\"},\"user_id\":{\"@path\":\"$.properties.USER_ID\"}}"
