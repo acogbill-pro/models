@@ -4,11 +4,11 @@ import {
 }
 
 resource "segment_reverse_etl_model" "id-jVekacFFukWA38jFXYz46F" {
-  description             = "reviews"
+  description             = "my_first_dbt_model"
   enabled                 = true
   name                    = "Reviews (DBT)"
-  query                   = "select id, anonymous_id, user_id, \nCONCAT(id,'-',DATE_PART(epoch_second, CURRENT_TIMESTAMP())) as generated_id,\ntimestamp,\nproduct_name,\nproduct_description,\nproduct_category,\nPRODUCT_PRICE_USD as price,\ncontents as review,\nTO_NUMBER(ROUND(SNOWFLAKE.CORTEX.SENTIMENT(review)*100,0)) as sentiment_score\nfrom ACOGBILL_DEMO.SHOP_SITE.product_review"
-  query_identifier_column = "id"
+  query                   = "/*\n    Welcome to your first dbt model!\n    Did you know that you can also configure models directly within SQL files?\n    This will override configurations stated in dbt_project.yml\n\n    Try changing \"table\" to \"view\" below\n*/\n\n\n\nwith source_data as (\n\n    select 1 as id\n    union all\n    select null as id\n\n)\n\nselect *\nfrom source_data\n\n/*\n    Uncomment the line below to remove records with null `id` values\n*/\n\nwhere id is not null"
+  query_identifier_column = "generated_id"
   schedule_config         = "{}"
   schedule_strategy       = ""
   source_id               = "6ug89BNDp2YUE5FDRbXJXc"
