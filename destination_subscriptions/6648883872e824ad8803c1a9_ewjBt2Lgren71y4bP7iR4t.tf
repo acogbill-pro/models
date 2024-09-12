@@ -9,6 +9,6 @@ resource "segment_destination_subscription" "id-6648883872e824ad8803c1a9_ewjBt2L
   enabled        = true
   model_id       = "jVekacFFukWA38jFXYz46F"
   name           = "Product Review with Sentiment (DBT)"
-  settings       = "{\"anonymous_id\":{\"@path\":\"$.properties.ANONYMOUS_ID\"},\"consent\":{\"@path\":\"$.context.consent\"},\"event_name\":\"Product Review\",\"message_id\":{\"@path\":\"$.messageId\"},\"properties\":{\"@path\":\"$.properties\"},\"timestamp\":{\"@path\":\"$.properties.TIMESTAMP\"},\"traits\":{\"@path\":\"$.properties\"},\"user_id\":{\"@path\":\"$.properties.USER_ID\"}}"
+  settings       = "{\"anonymous_id\":{\"@path\":\"$.properties.ANONYMOUS_ID\"},\"consent\":{\"@path\":\"$.context.consent\"},\"event_name\":\"Product Review\",\"message_id\":{\"@path\":\"$.messageId\"},\"properties\":{\"@path\":\"$.properties\"},\"timestamp\":{\"@path\":\"$.properties.TIMESTAMP\"},\"user_id\":{\"@path\":\"$.properties.USER_ID\"}}"
   trigger        = "event = \"new\" or event = \"updated\""
 }
