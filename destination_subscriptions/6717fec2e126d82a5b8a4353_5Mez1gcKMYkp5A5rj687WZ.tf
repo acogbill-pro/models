@@ -9,6 +9,6 @@ resource "segment_destination_subscription" "id-6717fec2e126d82a5b8a4353_5Mez1gc
   enabled        = true
   model_id       = null
   name           = "Send Identify"
-  settings       = "{\"anonymous_id\":{\"@path\":\"$.properties.anonymous_id_c\"},\"consent\":{\"@path\":\"$.context.consent\"},\"engage_space\":\"x2zPLJyKwsPESrDJLQiAGAlIWYH5IYlk\",\"message_id\":{\"@path\":\"$.messageId\"},\"timestamp\":{\"@path\":\"$.receivedAt\"},\"traits\":{\"@path\":\"$.properties\"},\"user_id\":{\"@path\":\"$.properties.user_id_c\"}}"
+  settings       = "{\"anonymous_id\":{\"@path\":\"$.properties.anonymous_id_c\"},\"consent\":{\"@path\":\"$.context.consent\"},\"engage_space\":\"x2zPLJyKwsPESrDJLQiAGAlIWYH5IYlk\",\"message_id\":{\"@path\":\"$.messageId\"},\"timestamp\":{\"@path\":\"$.receivedAt\"},\"traits\":{\"anonymous_id\":{\"@path\":\"$.properties.anonymous_id_c\"},\"dwh_validated\":{\"@path\":\"$.properties.dwh_validated_c\"},\"first_name\":{\"@path\":\"$.properties.first_name\"},\"follow_up\":{\"@path\":\"$.properties.follow_up_c\"},\"last_name\":{\"@path\":\"$.properties.last_name\"},\"salesforce_id\":{\"@path\":\"$.properties.id\"},\"updated_on\":{\"@path\":\"$.receivedAt\"}},\"user_id\":{\"@path\":\"$.properties.user_id_c\"}}"
   trigger        = "event=\"object-destination-data\""
 }
