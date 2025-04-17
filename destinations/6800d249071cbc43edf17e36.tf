@@ -16,7 +16,7 @@ resource "segment_destination" "id-6800d249071cbc43edf17e36" {
   settings = jsonencode({
     endpoint       = "https://www.andycogbill.com/api/log/"
     orderEventName = "LA - Registered Users entered"
-    sourceName     = ""
+    sourceName     = "cogbill-demo/marketing-prod"
     spaceName      = ""
   })
   source_id = "coAiUP12TUBsUziLCj6yd4"
