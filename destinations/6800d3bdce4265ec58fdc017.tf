@@ -15,7 +15,7 @@ resource "segment_destination" "id-6800d3bdce4265ec58fdc017" {
   name = "Order Dispatcher (Cogbill Demo) (3)"
   settings = jsonencode({
     endpoint       = "https://www.andycogbill.com/api/log/"
-    orderEventName = ""
+    orderEventName = "Sample"
     sourceName     = ""
     spaceName      = ""
   })
