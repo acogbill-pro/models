@@ -17,7 +17,7 @@ resource "segment_destination" "id-6800d3bdce4265ec58fdc017" {
     endpoint       = "https://www.andycogbill.com/api/log/"
     orderEventName = "Sample"
     sourceName     = "Sample"
-    spaceName      = ""
+    spaceName      = "Sample"
   })
   source_id = "cuhvL1s5tygSmJyLqvM1pL"
 }
