@@ -21,7 +21,7 @@ resource "segment_destination" "id-684713274f05b80929f111c6" {
       configId = "684713274f05b80929f111c6"
     }
     endpoint       = "https://api.sendgrid.com"
-    sendGridApiKey = "••••••••••lfYI"
+    sendGridApiKey = "••••••••••peJU"
   })
   source_id = "2TapZFYdqrQMgoXiU2JZCU"
 }
