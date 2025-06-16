@@ -14,46 +14,43 @@ resource "segment_destination_subscription" "id-6619bbea9effa6d8a6d5b7a2_vVrfjyx
     _update_existing_only = false
     batch_size            = 75
     braze_id = {
-      "@template" = "{{properties.braze_id}}"
+      "@path" = "$.properties.braze_id"
     }
     country = {
-      "@template" = "{{context.location.country}}"
+      "@path" = "$.context.location.country"
     }
     current_location = {
       latitude = {
-        "@template" = "{{context.location.latitude}}"
+        "@path" = "$.context.location.latitude"
       }
       longitude = {
-        "@template" = "{{context.location.longitude}}"
+        "@path" = "$.context.location.longitude"
       }
     }
     custom_attributes = {
-      "@template" = "{{traits}}"
+      "@path" = "$.traits"
     }
     email = {
-      "@template" = "{{traits.email}}"
+      "@path" = "$.traits.email"
     }
     enable_batching = true
     external_id = {
-      "@template" = "{{userId}}"
+      "@path" = "$.userId"
     }
     first_name = {
-      "@template" = "{{traits.firstName}}"
+      "@path" = "$.traits.firstName"
     }
     gender = {
-      "@template" = "{{traits.gender}}"
+      "@path" = "$.traits.gender"
     }
     home_city = {
-      "@template" = "{{traits.address.city}}"
+      "@path" = "$.traits.address.city"
     }
     image_url = {
-      "@template" = "{{traits.avatar}}"
+      "@path" = "$.traits.avatar"
     }
     last_name = {
-      "@template" = "{{traits.lastName}}"
-    }
-    phone = {
-      "@template" = "{{traits.phone}}"
+      "@path" = "$.traits.lastName"
     }
   })
   trigger = "type = \"identify\""
