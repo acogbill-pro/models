@@ -1,0 +1,14 @@
+import {
+  to = segment_function.id-sfnc_5bq5TOz9BD
+  id = "sfnc_5bq5TOz9BD"
+}
+
+resource "segment_function" "id-sfnc_5bq5TOz9BD" {
+  code          = "// Learn more about source functions API at\n// https://segment.com/docs/connections/sources/source-functions\n\n/**\n * Handle incoming HTTP request\n *\n * @param  {FunctionRequest} request\n * @param  {FunctionSettings} settings\n */\nasync function onRequest(request, settings) {\n\tSegment.identify({\n\t\tuserId: 'Andy_Cogbill_id',\n\t\ttraits: {\n\t\t\tisNewCustomer: true\n\t\t}\n\t});\n\t/*const body = request.json()\n\n  const endpoint = ''; // replace with your endpoint\n\tlet response\n\n  try {\n    response = await fetch(endpoint, {\n  \t\tmethod: 'POST',\n  \t\theaders: {\n  \t\t\tAuthorization: `Basic $${btoa(settings.apiKey + ':')}`,\n  \t\t\t'Content-Type': 'application/json'\n  \t\t},\n  \t\tbody: JSON.stringify(body)\n    });\n  } catch (error) {\n    // Retry on connection error\n    throw new RetryError(error.message)\n  }\n\n  if (response.status >= 500 || response.status === 429) {\n    // Retry on 5xx (server errors) and 429s (rate limits)\n    throw new RetryError(`Failed with $${response.status}`)\n  }\n\n  // See https://segment.com/docs/connections/spec/track/\n  Segment.track({\n    event: 'Test Event',\n    userId: 'user_id',\n    properties: {\n      testProperty: 'testValue',\n      testProperty2: response.propertyName,\n    }\n  })\n\n  // See https://segment.com/docs/connections/spec/identify/\n  Segment.identify({\n    userId: 'user_id',\n    traits: {\n      userName: 'Unicorn'\n    }\n  })\n\n  // See https://segment.com/docs/connections/spec/group/\n  Segment.group({\n    groupId: 'group_id',\n    userId: 'user_id',\n    traits: {\n      groupName: 'Unicorn'\n    }\n  })\n\n  // See https://segment.com/docs/connections/spec/page/\n  Segment.page({\n    name: 'Home page',\n    userId: 'user_id',\n    properties: {\n      url: 'https://mywebsite.com/about'\n    }\n  })\n\n  // See https://segment.com/docs/connections/spec/screen/\n  Segment.screen({\n    name: 'Test Screen',\n    userId: 'user_id',\n    properties: {\n      url: 'https://mywebsite.com/about'\n    }\n  })\n\n  // See https://segment.com/docs/connections/sources/catalog/libraries/server/object-api/\n  Segment.set({\n    collection: 'users',\n    id: 'user_id',\n    properties: {\n      userName: 'Unicorn'\n    }\n  })\n  */\n}\n"
+  description   = null
+  display_name  = "Identify as New Customer"
+  logo_url      = "https://cdn-devcenter.segment.com/4ac0c869-315e-461b-8198-d0b97bb407bc.png"
+  resource_type = "SOURCE"
+  settings = [
+  ]
+}
