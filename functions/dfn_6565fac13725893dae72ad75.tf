@@ -1,0 +1,14 @@
+import {
+  to = segment_function.id-dfn_6565fac13725893dae72ad75
+  id = "dfn_6565fac13725893dae72ad75"
+}
+
+resource "segment_function" "id-dfn_6565fac13725893dae72ad75" {
+  code          = "// Learn more about destination functions API at\n// https://segment.com/docs/connections/destinations/destination-functions\n\n/**\n * Handle track event\n * @param  {SegmentTrackEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onTrack(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/track/\n\tthrow new EventNotSupported('track is not supported');\n}\n\n/**\n * Handle identify event\n * @param  {SegmentIdentifyEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onIdentify(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/identify/\n\treturn event;\n}\n\n/**\n * Handle group event\n * @param  {SegmentGroupEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onGroup(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/group/\n\tconst { userId: originalUser, groupId, traits: originalTraits } = event;\n\t// console.log('group ID', groupId)\n\tconst { name: fname } = originalTraits;\n\tconst userId = groupId;\n\tconst traits = Object.assign(originalTraits, {\n\t\tuser_id: userId,\n\t\tgroupId: originalUser,\n\t\tfname,\n\t\tlname: 'COMPANY'\n\t});\n\tconst payload = { userId, traits };\n\n\tconsole.log(payload);\n\tSegment.identify(payload);\n\treturn { userId, groupId: originalUser, traits: originalTraits };\n}\n\n/**\n * Handle page event\n * @param  {SegmentPageEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onPage(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/page/\n\tthrow new EventNotSupported('page is not supported');\n}\n\n/**\n * Handle screen event\n * @param  {SegmentScreenEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onScreen(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/screen/\n\tthrow new EventNotSupported('screen is not supported');\n}\n\n/**\n * Handle alias event\n * @param  {SegmentAliasEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onAlias(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/alias/\n\tthrow new EventNotSupported('alias is not supported');\n}\n\n/**\n * Handle delete event\n * @param  {SegmentDeleteEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onDelete(event, settings) {\n\t// Learn more at https://segment.com/docs/partners/spec/#delete\n\tthrow new EventNotSupported('delete is not supported');\n}\n"
+  description   = null
+  display_name  = null
+  logo_url      = "https://cdn.filepicker.io/api/file/RmPmpcBTQZKaFeGQrdG5"
+  resource_type = "DESTINATION"
+  settings = [
+  ]
+}

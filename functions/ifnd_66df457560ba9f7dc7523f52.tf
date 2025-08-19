@@ -1,0 +1,14 @@
+import {
+  to = segment_function.id-ifnd_66df457560ba9f7dc7523f52
+  id = "ifnd_66df457560ba9f7dc7523f52"
+}
+
+resource "segment_function" "id-ifnd_66df457560ba9f7dc7523f52" {
+  code          = "// Learn more about insert destination functions API at\n// https://segment.com/docs/connections/functions/insert-functions/\n\n/**\n * Handle track event\n * @param  {SegmentTrackEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onTrack(event, settings) {\n\tfunction lowerCaseObjectKeys(obj) {\n\t\treturn Object.keys(obj).reduce((newObject, key) => {\n\t\t\tif (key === 'USER_ID' || key === 'ID' || key === 'ANONYMOUS_ID') {\n\t\t\t\tnewObject[key] = obj[key];\n\t\t\t\treturn newObject;\n\t\t\t}\n\t\t\tlet lowerCasedKey = key.toLowerCase();\n\t\t\tif (newObject[lowerCasedKey] === undefined) {\n\t\t\t\tlet value = obj[key];\n\n\t\t\t\tnewObject[lowerCasedKey] = value;\n\t\t\t}\n\n\t\t\treturn newObject;\n\t\t}, {});\n\t}\n\tevent.properties = lowerCaseObjectKeys(event.properties);\n\tconsole.log(event);\n\treturn event;\n}\n\n/**\n * Handle identify event\n * @param  {SegmentIdentifyEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onIdentify(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/identify/\n\tthrow new EventNotSupported('identify is not supported');\n}\n\n/**\n * Handle group event\n * @param  {SegmentGroupEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onGroup(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/group/\n\tthrow new EventNotSupported('group is not supported');\n}\n\n/**\n * Handle page event\n * @param  {SegmentPageEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onPage(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/page/\n\tthrow new EventNotSupported('page is not supported');\n}\n\n/**\n * Handle screen event\n * @param  {SegmentScreenEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onScreen(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/screen/\n\tthrow new EventNotSupported('screen is not supported');\n}\n\n/**\n * Handle alias event\n * @param  {SegmentAliasEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onAlias(event, settings) {\n\t// Learn more at https://segment.com/docs/connections/spec/alias/\n\tthrow new EventNotSupported('alias is not supported');\n}\n\n/**\n * Handle delete event\n * @param  {SegmentDeleteEvent} event\n * @param  {FunctionSettings} settings\n */\nasync function onDelete(event, settings) {\n\t// Learn more at https://segment.com/docs/partners/spec/#delete\n\tthrow new EventNotSupported('delete is not supported');\n}\n"
+  description   = null
+  display_name  = null
+  logo_url      = "https://cdn.filepicker.io/api/file/RmPmpcBTQZKaFeGQrdG5"
+  resource_type = "INSERT_DESTINATION"
+  settings = [
+  ]
+}
